@@ -30,7 +30,7 @@ gitを使い始める際に最初に必ず設定すべき項目。
 ### git config --global core.editor emacs</dt>
   コミット時にログを編集するエディタを設定する。  
   Windows環境で他のアプリケーションを使いたい場合，以下のコマンドとなる(らしい)  
-  git config --global core.editor "'f:\tool\TeraPad\TeraPad.exe' //cu8"
+  git config --global core.editor "'C:\tool\TeraPad\TeraPad.exe' //cu8"
 
 ### git config --global color.* auto
   git config --global color.diff auto  
@@ -63,10 +63,10 @@ Mac ユーザーの中では有名ですが、濁点つきのディレクトリ�
 
 ### 設定する値を間違えてしまった場合
 
-- git comfig --global user.email myname@hoge.co  
+- git comfig --global user.email myname[at]]hoge.co  
   上記のように最後に「m」を付け忘れてしまった，  
   というようなケースでは正しいコマンドを実行しなおせば良い。  
-  git comfig --global user.email myname@hoge.com  
+  git comfig --global user.email myname[at]hoge.com  
 
 ### 設定する項目名を間違えてしまった場合
 - git config --unset <削除したい設定の名前>  

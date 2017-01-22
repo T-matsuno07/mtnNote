@@ -78,32 +78,48 @@ Mac ユーザーの中では有名ですが、濁点つきのディレクトリ�
  設定する項目名を間違えてしまった場合，  
  (例えば user.emilとタイプミスしてしまったなど)は以下のコマンドで設定を削除する。
 
+# コマンドを短縮形を有効にする
+gitコマンドを実効する際に，毎回gitコマンドを全て入力していると作業効率が下がってしまうので，git用のalias登録をしておくと良い。
+ホームディレクトリ直下に存在する「.gitconfig」に以下の内容を入力する。  
+「vi ~/.gitconfig」  
+```bash
+[alias]
+    ad = add
+    br = branch
+    ci = commit
+    co = checkout
+    ft = fetch
+    pl = pull
+    ps = push
+    sh = show
+    st = status
+```
 
-# 設定ファイル
+# 設定ファイルの所在
 gitの設定ファイルには大きく分けて3種類存在する
 
 ## local
 リポジトリ単位の設定を格納するフォルダ  
 ファイルの所在は，  
- $TOP_DIR/.git/config
+`` $TOP_DIR/.git/config``
 
 
 gitコマンドで値を設定する場合，「--local」オプションを設定するのが基本  
-git config --local --list
+``git config --local --list``
 
 
 ## global
 ユーザー単位の設定を格納するフォルダ  
 ファイルの所在は  
-$HOME/.gitconfig
+``$HOME/.gitconfig``
 
 gitコマンドで値を設定する場合，「--global」オプションを設定するのが基本  
-git config --global --list
+``git config --global --list``
 
 ## system
 マシン単位の設定を格納するフォルダ  
 ファイルの所在は不明。helpには  
-/etc/gitconfig
+``/etc/gitconfig``
 と記載があるが。。。。
 
 gitコマンドで値を設定する場合，「--system」オプションを設定するのが基本  

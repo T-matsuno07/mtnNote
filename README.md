@@ -4,12 +4,12 @@
 gitを使い始める際に最初に必ず設定すべき項目。  
 以下の設定はログインユーザ単位で反映される項目なので，全員が実施する必要がある。
 
-### git config --global user.name "あなたの名前" </dt>
+### git config --global user.name "あなたの名前"
  ユーザ名称設定コマンド。   
  ユーザ名称を設定しない場合，ログイン名称などがデフォルトで使用される。  
  未設定の場合Githubへのpushが拒否されるので，実質必須設定項目。
 
-### git config --global user.name "あなたの名前" </dt>
+### git config --global user.name "あなたの名前"
   ユーザ名称設定コマンド。  
   ユーザ名称を設定しない場合，ログイン名称などがデフォルトで使用される。  
   未設定の場合Githubへのpushが拒否されるので，実質必須設定項目。
@@ -22,15 +22,16 @@ gitを使い始める際に最初に必ず設定すべき項目。
  fast-forwardマージを実施しない。  
  ブランチをマージする際に，fast-forward-mergeが可能であったとしても，マージコメットを発行する。  
  これにより，作業用マージが存在したというログが残る。
-### git config --global --add pull.ff only</dt>
+### git config --global --add pull.ff only
  pull時にマージを実施しない。  
  同一ブランチ内でのマージコミットを発生させないための設定。  
  この設定をしないと，不要なマージログが多発し，ログが荒れる
 
-### git config --global core.editor emacs</dt>
+### git config --global core.editor emacs
   コミット時にログを編集するエディタを設定する。  
   Windows環境で他のアプリケーションを使いたい場合，以下のコマンドとなる(らしい)  
-  git config --global core.editor "'C:\tool\TeraPad\TeraPad.exe' //cu8"
+  git config --global core.editor "'D:\ProgramFiles\sakura\sakura.exe'"
+
 
 ### git config --global color.* auto
   git config --global color.diff auto  
@@ -39,6 +40,10 @@ gitを使い始める際に最初に必ず設定すべき項目。
 
   git diff に色付けして表示する。  
  diffの視認性を上げるために設定しておきたい項目。  
+
+### git config --global push.default simple
+pushコマンドを引数未指定で実行した際の挙動を設定します。
+gitのバージョンが古い場合，この設定を行わないとpushの度に警告文が表示されるので最初に設定しておくこと。
 
 ### commit.template に指定されているファイルを設定
  コミット時にデフォルトで入力されている文字列を設定する。  
